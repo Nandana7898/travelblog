@@ -6,11 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <!-- Bootstrap CSS -->
+    
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Shadows+Into+Light+Two&display=swap" rel="stylesheet">
-    <link rel="stylsheet" href="static/css/style.css">
+    
     <!-- custom css -->
     <style>
     /* bootstrap002.css
@@ -110,6 +111,33 @@
       }
     }
 
+      .navbar .navbar-nav .nav-link {
+  color: #D1D1D1;
+  font-size: 1.1em;
+}
+.navbar .navbar-nav .nav-link:hover {
+  color: #ffffff;
+}
+.navbar .navbar-nav .nav-item {
+  position: relative;
+}
+.navbar .navbar-nav .nav-item::after {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  background-color: #820000;
+  width: 0%;
+  content: "";
+  height: 4px;
+  transition: all 0.5s;
+}
+
+.navbar .navbar-nav .nav-item:hover::after {
+  width: 100%;
+}
+
     </style>
 
     <title>About Me</title>
@@ -118,21 +146,25 @@
   <body>
 
     <header>
-      <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
-        <a class="navbar-brand" href="#">Travel Blog</a>
+      <nav class="navbar navbar-expand-md navbar-dark fixed-top" style="background-color:#3C6255;">
+        <a class="navbar-brand" href="/">
+          Travel Blog</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarCollapse">
           <ul class="navbar-nav mr-auto">
-            <li class="nav-item active">
-              <a class="nav-link" href="">Home<span class="sr-only">(current)</span></a>
+            <li class="nav-item ">
+              <a class="nav-link" href="/">Home</a>
             </li>
-            <li class="nav-item">
-              <a class="nav-link" href="/about/">About</a>
+            <li class="nav-item active">
+              <a class="nav-link" href="/about/"><span class="sr-only">(current)</span>About</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="/blog/">Blog</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/gallery/">Gallery</a>
             </li>
           </ul>
           
@@ -145,7 +177,7 @@
         <div class="col-md-8 mx-auto ">
             <h1 style="font-family:'Shadows Into Light Two', cursive; text-align: center;color: black;"> ABOUT ME </h1>
         </div>
-        <div class="col-md-8 mx-auto mydiv mt-3" style="background-color: #F0EEED; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);font-family: 'Shantell Sans', cursive;">
+        <div class="col-md-8 mx-auto mydiv mt-3 p-3" style="background-color: #F0EEED; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);font-family: 'Shantell Sans', cursive;border-radius:40px;">
 
             "Hello and welcome to my travel blog! My name is Nandana, and I'm thrilled to have you here. 
             I'm a passionate traveler and adventurer. I created this blog to share my love of travel with the world and inspire others to explore new places and cultures.
@@ -162,9 +194,9 @@ Thank you for joining me on this journey. I look forward to sharing many more tr
 
         
       <!-- FOOTER -->
-      <footer class="container mt-5 pt-4">
-        <p class="float-right"><a href="/">Back to top</a></p>
-        <p>&copy; 2017-2018 Company, Inc. &middot; <a href="#">Privacy</a> &middot; <a href="#">Terms</a></p>
+      <footer class="container mt-5 mb-0">
+        <p class="float-right"><a href="/about/">Back to top</a></p>
+        <p>&copy; 2023-2024 Company, Inc.  </p>
       </footer>
 
     <!-- Optional JavaScript -->
