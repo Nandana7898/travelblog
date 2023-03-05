@@ -14,4 +14,7 @@ def blogdetails(request,pk):
     return render(request,'blogdetails.html',{'postlist':postlist})
 
 def about(request):
-    return render(request,'about.html')
+  return render(request,'about.html')
+
+def gallery(request):
+  return render(request,'gallery.html')
