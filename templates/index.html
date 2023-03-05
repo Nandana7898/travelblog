@@ -8,14 +8,14 @@
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
-    <link rel="stylesheet" href="static/css/style.css">
+    
+   
     <!-- custom css -->
     <style>
-       #map {
-        height: 800px;
-        width: 100%;
-        margin-top: -63px;
-       }
+      @import url('https://fonts.googleapis.com/css2?family=Tilt+Warp&display=swap');
+      @import url('https://fonts.googleapis.com/css2?family=Satisfy&display=swap');
+      @import url('https://fonts.googleapis.com/css2?family=Shantell+Sans:wght@300&display=swap');
+       
        /* bootstrap002.css
        GLOBAL STYLES
        -------------------------------------------------- */
@@ -43,7 +43,7 @@
 
        /* Declare heights because of positioning of img element */
        .carousel-item {
-         height: 32rem;
+         height: 28rem;
          background-color: #777;
        }
        .carousel-item > img {
@@ -109,15 +109,88 @@
          }
        }
 
+      .navbar .navbar-nav .nav-link {
+  color: #D1D1D1;
+  font-size: 1.1em;
+}
+.navbar .navbar-nav .nav-link:hover {
+  color: #ffffff;
+}
+.navbar .navbar-nav .nav-item {
+  position: relative;
+}
+.navbar .navbar-nav .nav-item::after {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  background-color: #820000;
+  width: 0%;
+  content: "";
+  height: 4px;
+  transition: all 0.5s;
+}
+
+.navbar .navbar-nav .nav-item:hover::after {
+  width: 100%;
+}
+
+.glow{
+background:linear-gradient(135deg, rgba(255,255,255,0.1), rgba(255,255,255,0));
+  backdrop-filter:blur(10px);
+  -webkit-backdrop-filter:blur(10px);
+  border-radius:20px;
+  border:1px solid rgba(255, 255, 255, 0.18);
+  box-shadow:0 8px 32px 0 rgba(0, 0, 0, 0.37);
+
+}
+      
+      .animate-charcter
+{
+   text-transform: uppercase;
+  background-image: linear-gradient(
+    -225deg,
+    #231557 0%,
+    #44107a 29%,
+    #ff1361 67%,
+    #fff800 100%
+  );
+  background-size: auto auto;
+  background-clip: border-box;
+  background-size: 200% auto;
+  color: #fff;
+  background-clip: text;
+  text-fill-color: transparent;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: textclip 2s linear infinite;
+  display: inline-block;
+      font-size: 69px;
+  font-family: 'Tilt Warp', cursive;
+  margin-left:0px;
+}
+
+@keyframes textclip {
+  to {
+    background-position: 200% center;
+  }
+}
+
+
+  
     </style>
 
     <title>Travel Blog</title>
   </head>
 
-  <body class="switch">
+  <body >
+
+    
+    
 
     <header>
-      <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+     <nav class="navbar navbar-expand-md navbar-dark fixed-top" style="background-color:#3C6255;">
         <a class="navbar-brand" href="/">Travel Blog</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
@@ -133,13 +206,43 @@
             <li class="nav-item">
               <a class="nav-link" href="/blog/">Blog</a>
             </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/gallery/">Gallery</a>
+            </li>
           </ul>
           
         </div>
       </nav>
     </header>
 
+    <section>
+      
+        <div class="col-md-12" style="background:url('static/images/pplbg3.jpg');width:100%;height:500px;background-size:cover; ">
+          <div class="row mt-5">
+            <div class="col-md-7 " style="margin-top:80px;">
+              <h1  class="animate-charcter"> EXPLORE, <br>
+              DREAM,<br>
+              DISCOVER...</h1>
+              <p style="font-family: 'Shantell Sans', cursive;font-size:23px;background: -webkit-linear-gradient(180deg,#26D0CE,#1A2980);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;"><b>Adventures and Stories from Around the World
+                   </b>          
+              
+              
+              </p>
+            </div>
+
+            
+          </div>
+
+          
+          
+        </div>
+      
+    </section>
+
     <main role="main">
+      
 
       <div id="myCarousel" class="carousel slide" data-ride="carousel">
         <ol class="carousel-indicators">
@@ -150,34 +253,17 @@
         <div class="carousel-inner">
           <div class="carousel-item active">
             <img class="second-slide" src="static/images/taiwan.jpg" alt="first slide">
-            <div class="container">
-              <div class="carousel-caption text-left">
-                <h1 >Taiwan</h1>
-                <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
-
-              </div>
-            </div>
+            
           </div>
           <div class="carousel-item">
             <img class="second-slide" src="static/images/greece.jpg" alt="Second slide">
-            <div class="container">
-              <div class="carousel-caption">
-                <h1 >Greece</h1>
-                <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
-                <p><a class="btn btn-lg btn-primary" href="#" role="button">Learn more</a></p>
-              </div>
-            </div>
+            
           </div>
           <div class="carousel-item">
             <img class="third-slide" src="static/images/niagara.jpg" alt="Third slide" width="500px" height="500px">
-            <div class="container">
-              <div class="carousel-caption text-right">
-                <h1 >Niagara Falls </h1>
-                <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
-                <p><a class="btn btn-lg btn-primary" href="#" role="button">Browse gallery</a></p>
-              </div>
-            </div>
+            
           </div>
+          
         </div>
         <a class="carousel-control-prev" href="#myCarousel" role="button" data-slide="prev">
           <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -189,13 +275,13 @@
         </a>
       </div>
 
-      <!-- google map api -->
-      <div id="map"></div>
-      <br><br>
+     
+      
+      
 
       <!-- Marketing messaging and featurettes
       ================================================== -->
-      <!-- Wrap the rest of the page in another container to center all the content. -->
+      
 
       <div class="container marketing">
 
@@ -207,7 +293,7 @@
             <br>
             <h2>Gorson Bugyal, India</h2>
             <p>Exploring Gorson Bugyal is an experience of a lifetime - from traversing through the lush green meadows to hiking up to the majestic peaks, every step is a delightful adventure that immerses you in the beauty of the Himalayas. With its refreshing air, scenic vistas, and tranquil environment, Gorson Bugyal is the perfect destination for those seeking a rejuvenating escape from the bustle of everyday life.</p>
-            <p><a class="btn btn-secondary" href="#" role="button">View details &raquo;</a></p>
+            <p><a class="btn btn-secondary" href="https://travelblog.nandana7898.repl.co/blog/15/" role="button">View details &raquo;</a></p>
           </div><!-- /.col-lg-4 -->
           <div class="col-lg-4 mt-3">
             <img class="rounded-circle" src="static/images/Al-Dayr-Petra-Jordan.jpg" alt="Generic placeholder image" width="140" height="140">
@@ -216,7 +302,7 @@
             <br>
             <h2>Petra, Jordan</h2>
             <p>Petra, Jordan is an ancient city of remarkable history and stunning architecture - the iconic Treasury and Monastery carved into the rock faces are a testament to the incredible skill of the Nabateans who once called this city home. Exploring Petra is a journey back in time, as you wander through the narrow canyons and awe-inspiring ruins, experiencing the wonder and mystery of this awe-inspiring UNESCO World Heritage Site.</p>
-            <p><a class="btn btn-secondary" href="#" role="button">View details &raquo;</a></p>
+            <p><a class="btn btn-secondary" href="https://travelblog.nandana7898.repl.co/blog/16/" role="button">View details &raquo;</a></p>
           </div><!-- /.col-lg-4 -->
           <div class="col-lg-4 mt-3">
             <img class="rounded-circle" src="static/images/clif.jpg" alt="Generic placeholder image" width="140" height="140">
@@ -225,7 +311,7 @@
             <br>
             <h2>Cliffs of Moher, Ireland</h2>
             <p>The Cliffs of Moher in Ireland offer a dramatic and awe-inspiring view of the Atlantic Ocean, towering over 700 feet above the waves below. The rugged cliffs, rolling hills, and breathtaking coastline make this a must-see destination for anyone looking to experience the natural beauty of the Emerald Isle. With its stunning scenery and rich cultural heritage, it is an opportunity to immerse oneself in the beauty and history of Ireland's west coast.</p>
-            <p><a class="btn btn-secondary" href="#" role="button">View details &raquo;</a></p>
+            <p><a class="btn btn-secondary" href="https://travelblog.nandana7898.repl.co/blog/17/" role="button">View details &raquo;</a></p>
           </div><!-- /.col-lg-4 -->
         </div><!-- /.row -->
 
@@ -234,10 +320,10 @@
 
         <hr class="featurette-divider">
 
-        <div class="row featurette">
-          <div class="col-md-7">
+        <div class="row featurette"  >
+          <div class="col-md-7" >
             <h2 class="featurette-heading">Awe-Inspiring Parisian Icon:</h2> <h3> <span class="text-muted">The Eiffel Tower in all its Glory</span></h3>
-            <p class="lead">Experience the timeless allure of Paris with a glimpse of the iconic Eiffel Tower - a towering monument that captures the city's romance, elegance, and grandeur.</p>
+            <p class="lead" >Experience the timeless allure of Paris with a glimpse of the iconic Eiffel Tower - a towering monument that captures the city's romance, elegance, and grandeur.</p>
           </div>
           <div class="col-md-5">
             <img class="featurette-image img-fluid mx-auto rounded shadow" src="static/images/effieltower.jpg" alt="Generic placeholder image">
@@ -260,7 +346,7 @@
 
         <div class="row featurette">
           <div class="col-md-7">
-            <h2 class="featurette-heading">Singapore's Iconic Landmarks: </h2><h3>  <span class="text-muted">From the Merlion to Marina Bay Sands</span></h3>
+            <h2 class="featurette-heading">Savoring Singapore: </h2><h3>  <span class="text-muted">A Visual Feast of Cuisine and Culture</span></h3>
             <p class="lead">Experience the ultimate fusion of tradition and modernity in Singapore - a dynamic city-state that enthralls with its colorful culture, futuristic architecture, culinary delights, and more.</p>
           </div>
           <div class="col-md-5">
@@ -276,50 +362,22 @@
 
 
       <!-- FOOTER -->
-      <footer class="container">
+      <footer class="container mt-4 mb-0">
         <p class="float-right"><a href="/">Back to top</a></p>
-        <p>&copy; 2017-2018 Company, Inc. &middot; <a href="#">Privacy</a> &middot; <a href="#">Terms</a></p>
+        <p>&copy; 2023-2024 Company, Inc.  </p>
       </footer>
     </main>
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    </script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
     <script>
-      function initMap() {
-        {% for list in postlist %}
-          var {{list.postname}} = new google.maps.LatLng({{list.Lat}},{{list.Lng}});
-        {% endfor %}
 
-        var tripcenter = {lat: 12.249710, lng: 130.063408};
-        var map = new google.maps.Map(document.getElementById('map'), {
-          zoom: 3,
-          center: tripcenter
-        });
-
-      {% for list in postlist %}
-      var {{list.postname}}marker = new google.maps.Marker({
-          position: {{list.postname}},
-          map: map
-        });
-      var infowindow = new google.maps.InfoWindow({
-        content: "<a href='http://127.0.0.1:8000/blog/{{ list.pk }}/'><img width='100px;' src='{{ list.mainphoto.url }}'></a><br><p>{{list.postname}}</p>"
-      });
-      infowindow.open(map,{{list.postname}}marker);
-      {% endfor %}
-
-      }
-
-     
-
-
-
-
+      
     </script>
-    <script async defer
-    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCdKrZSsLIuxHuu59UCARaAvUtcmaMmBeU&callback=initMap">
-    </script>
+    
   </body>
 </html>
