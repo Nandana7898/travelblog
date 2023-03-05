@@ -108,6 +108,33 @@
         width: 100%;
         margin-top: -63px;
        }
+
+      .navbar .navbar-nav .nav-link {
+  color: #D1D1D1;
+  font-size: 1.1em;
+}
+.navbar .navbar-nav .nav-link:hover {
+  color: #ffffff;
+}
+.navbar .navbar-nav .nav-item {
+  position: relative;
+}
+.navbar .navbar-nav .nav-item::after {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  background-color: #820000;
+  width: 0%;
+  content: "";
+  height: 4px;
+  transition: all 0.5s;
+}
+
+.navbar .navbar-nav .nav-item:hover::after {
+  width: 100%;
+}
     </style>
 
     <title>Travel Blog</title>
@@ -116,21 +143,24 @@
   <body>
 
     <header>
-      <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
-        <a class="navbar-brand" href="#">Travel Blog</a>
+      <nav class="navbar navbar-expand-md navbar-dark fixed-top " style="background-color:#3C6255;">
+        <a class="navbar-brand" href="/">Travel Blog</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarCollapse">
           <ul class="navbar-nav mr-auto">
             <li class="nav-item">
-              <a class="nav-link" href="#">Home</a>
+              <a class="nav-link" href="/">Home</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="about.html">About</a>
+              <a class="nav-link" href="/about/">About</a>
             </li>
             <li class="nav-item active">
-              <a class="nav-link" href="blog.html">Blog<span class="sr-only">(current)</span></a>
+              <a class="nav-link" href="/blog/">Blog<span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/gallery/">Gallery</a>
             </li>
           </ul>
           
@@ -140,12 +170,12 @@
 
     <main role="main">
 
-      <section class="jumbotron text-center">
+      <section class="jumbotron text-center" style="background-color:#F8EDE3;">
         <div class="container">
-          <h2 class="jumbotron-heading">Embracing the unknown and finding magic in every moment...</h2>
-          <p class="lead text-muted">Whether I'm hiking through the mountains or exploring a new city, I believe that every journey is an opportunity for personal growth. Join me as I seek out new experiences and push my limits.</p>
+          <h2 class="jumbotron-heading" style="color:black;">Embracing the <a style="color:#3F979B;">unknown</a> and <a style="color:#3F979B;"> finding magic </a> in every moment...</h2>
+          <p class="lead text-dark">Whether I'm hiking through the mountains or exploring a new city, I believe that every journey is an opportunity for personal growth. Join me as I seek out new experiences and push my limits.</p>
           <p>
-            <a href="#" class="btn btn-primary center my-2">Browse Gallery</a>
+            <a href="/gallery/" class="btn btn-warning center my-2" style="border:3px solid #ECA869;color:#144272;font-weight:bold;">Browse Gallery</a>
             
           </p>
         </div>
@@ -160,16 +190,17 @@
             <div class="col-md-4">
               <div class="card mb-4 box-shadow">
                 {% if list.mainphoto %}
-                  <a href="http://127.0.0.1:8000/blog/{{ list.pk }}/"><img class="card-img-top" src="{{ list.mainphoto.url }}" alt="Card image cap"></a>
+                  <a href="https://travelblog.nandana7898.repl.co/blog/{{ list.pk }}/"><img class="card-img-top" src="{{ list.mainphoto.url }}" alt="Card image"></a>
                 {% endif %}
-                <div class="card-body">
-                  <p class="card-text">{{list.postname}}</p>
+                <div class="card-body" >
+                  <p class="card-text"><h5>{{list.postname}}</h5></p>
                   <div class="d-flex justify-content-between align-items-center">
                     <div class="btn-group">
-                      <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                      <a href="https://travelblog.nandana7898.repl.co/blog/{{ list.pk }}/" class="text-dark">
+                      <button type="button" class="btn btn-sm btn-outline-success">View</button></a>
                       
                     </div>
-                    <small class="text-muted">9 mins</small>
+                    
                   </div>
                 </div>
               </div>
@@ -181,9 +212,9 @@
       </div>
 
       <!-- FOOTER -->
-      <footer class="container">
-        <p class="float-right"><a href="#">Back to top</a></p>
-        <p>&copy; 2017-2018 Company, Inc. &middot; <a href="#">Privacy</a> &middot; <a href="#">Terms</a></p>
+      <footer class="container mt-4 mb-0">
+        <p class="float-right"><a href="/blog/">Back to top</a></p>
+        <p>&copy; 2023-2024 Company, Inc.  </p>
       </footer>
     </main>
 
